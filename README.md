@@ -6,3 +6,5 @@
 
 - httpRequest (第２回の内容)
   - express を使って GET や POST 受ける処理を学びます
+- socketDemo (第３回の内容１)
+  - socket.io を使ったデモ
