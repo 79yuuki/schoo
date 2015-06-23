@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>deviceMotion</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+// ejs でホスト名を取得する
+var hostname = '<%= hostname %>';
+hostname = (hostname === 'localhost')? hostname + ':3000': hostname;
+var socket = io('http://' + hostname);
+socket.on('color', function(color) {
+  var rgb = color.R + color.G + color.B;
+  $('body').css({backgroundColor:rgb});
+});
+    </script>
+  </body>
+</html>
