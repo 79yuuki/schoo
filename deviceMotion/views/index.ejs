@@ -14,8 +14,8 @@ var hostname = '<%= hostname %>';
 hostname = (hostname === 'localhost')? 'http://' + hostname + ':3000': 'https://' + hostname;
 var socket = io.connect(hostname);
 socket.on('color', function(color) {
-  var rgb = color.R + color.G + color.B;
-  $('body').css({backgroundColor:rgb});
+  var rgb = 'rgb(' + color.R + ',' + color.G + ',' + color.B + ')';
+  $('body').css({backgroundColor: $.fmtColor(rgb) });
 });
     </script>
   </body>
