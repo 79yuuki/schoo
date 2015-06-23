@@ -1,0 +1,27 @@
+{
+  "name": "socketdemo",
+  "version": "1.0.0",
+  "description": "socket.io demo",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/79yuuki/schoo.git"
+  },
+  "keywords": [
+    "socket.io",
+    "demo"
+  ],
+  "author": "79yuuki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/79yuuki/schoo/issues"
+  },
+  "homepage": "https://github.com/79yuuki/schoo#readme",
+  "dependencies": {
+    "socket.io": "^1.3.5"
+  }
+}
