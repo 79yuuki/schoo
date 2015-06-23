@@ -6,8 +6,7 @@ module.exports = function(io) {
 
     // スマホの傾きデータを貰ってrgbとして扱える数値に変換してcolorイベントとしてemit
     socket.on('motion', function(data) {
-console.log(data);
-      socket.emit('color', xyz2rgb(data));
+      io.emit('color', xyz2rgb(data));
     });
   });
 };
@@ -17,7 +16,6 @@ var xyz2rgb = function (motionData) {
   color.R = Math.abs(Math.floor(motionData.x/10*255));
   color.G = Math.abs(Math.floor(motionData.y/10*255));
   color.B = Math.abs(Math.floor(motionData.z/10*255));
-  console.log(color);
 
   return color;
 };
