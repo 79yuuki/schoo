@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <canvas id="main"></canvas>
+    <ul id="colors">
+      <li id="red"></li>
+      <li id="yellow"></li>
+      <li id="blue"></li>
+      <li id="green"></li>
+      <li id="purple"></li>
+      <li id="white"></li>
+      <li id="black"></li>
+    </ul>
+    <div id="clear">CLEAR</div>
+    <script>
+      var hostname = '<%= hostname %>';
+    </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="javascripts/draw.js"></script>
+  </body>
+</html>
